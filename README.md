@@ -1,4 +1,4 @@
-#  KNOWva — Student Social & Study Platform
+#  UniHub — Student Social & Study Platform
 
 A full-stack MERN application for university students to share posts, study materials, chat, and collaborate — with an AI auto-classification system.
 
