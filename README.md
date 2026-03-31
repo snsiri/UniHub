@@ -1,10 +1,10 @@
-# 🎓 KNOWva — Student Social & Study Platform
+#  KNOWva — Student Social & Study Platform
 
 A full-stack MERN application for university students to share posts, study materials, chat, and collaborate — with an AI auto-classification system.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 knowva/
@@ -86,7 +86,7 @@ knowva/
 
 ---
 
-## ⚙️ Setup & Run
+##  Setup & Run
 
 ### 1. Prerequisites
 - Node.js v18+
@@ -123,63 +123,63 @@ npm start
 
 ---
 
-## 🚀 Features Implemented
+##  Features Implemented
 
 ### Posts
-- ✅ Create posts with text, images, videos, audio, PDFs, PPTs, Word docs, Excel sheets
-- ✅ Attach links (shown in blue), @mentions (shown in purple), poll creation
-- ✅ Public / Private (followers only) visibility
-- ✅ Post types: Regular Post, Study Material, Repost
-- ✅ Study materials: module code, material type, semester tagging
-- ✅ Edit & delete (owner only)
-- ✅ Like, save, view count, download count
-- ✅ Repost with optional note
-- ✅ Share post to DMs
-- ✅ Comments + nested replies
-- ✅ @mentions in comments notify the mentioned user
-- ✅ Poll voting
+-  Create posts with text, images, videos, audio, PDFs, PPTs, Word docs, Excel sheets
+-  Attach links (shown in blue), @mentions (shown in purple), poll creation
+-  Public / Private (followers only) visibility
+-  Post types: Regular Post, Study Material, Repost
+-  Study materials: module code, material type, semester tagging
+-  Edit & delete (owner only)
+-  Like, save, view count, download count
+-  Repost with optional note
+-  Share post to DMs
+-  Comments + nested replies
+-  @mentions in comments notify the mentioned user
+-  Poll voting
 
 ### Feed
-- ✅ Home feed: public posts + private posts from people you follow
-- ✅ Study materials feed filtered by semester, module code, material type
-- ✅ Semester-tagged materials automatically surface for relevant students
+-  Home feed: public posts + private posts from people you follow
+-  Study materials feed filtered by semester, module code, material type
+-  Semester-tagged materials automatically surface for relevant students
 
 ### Chat
-- ✅ Direct messages (DM) between users
-- ✅ Group chats with names, member management
-- ✅ Real-time messaging via Socket.io
-- ✅ Share posts to chats — click shared post → redirects to original post
-- ✅ Typing indicators
-- ✅ Online/offline presence
-- ✅ File/media sharing in chat
-- ✅ @mentions in messages
+-  Direct messages (DM) between users
+-  Group chats with names, member management
+-  Real-time messaging via Socket.io
+-  Share posts to chats — click shared post → redirects to original post
+-  Typing indicators
+-  Online/offline presence
+-  File/media sharing in chat
+-  @mentions in messages
 
 ### Users
-- ✅ Follow / unfollow
-- ✅ Profile with bio, semester, year, department
-- ✅ Profile picture upload
-- ✅ Saved posts page
-- ✅ Notifications (like, comment, follow, mention, reply)
-- ✅ @mention autocomplete when typing @
+-  Follow / unfollow
+-  Profile with bio, semester, year, department
+-  Profile picture upload
+-  Saved posts page
+-  Notifications (like, comment, follow, mention, reply)
+-  @mention autocomplete when typing @
 
 ### AI System
-- ✅ Auto-classify content → suggest module code, material type, tags
-- ✅ Cosine similarity detection → warns if similar material exists
-- ✅ Developer Panel (role = "developer"):
+-  Auto-classify content → suggest module code, material type, tags
+-  Cosine similarity detection → warns if similar material exists
+-  Developer Panel (role = "developer"):
   - Add/edit/delete module keyword dataset
   - Test classifier with any text
   - View accuracy stats & misclassification count
   - Monitor AI performance every semester
 
 ### Navigation (Left Sidebar)
-- ✅ Home, Study Materials, Messages, Saved, Notifications, Profile
-- ✅ Developer Panel (visible only to developer role)
-- ✅ Notification badge count
-- ✅ User card with logout
+-  Home, Study Materials, Messages, Saved, Notifications, Profile
+-  Developer Panel (visible only to developer role)
+-  Notification badge count
+-  User card with logout
 
 ---
 
-## 👨‍💻 Developer Responsibilities
+##  Developer Responsibilities
 
 ### Every Semester
 1. Log in with a `developer` role account
@@ -196,7 +196,7 @@ db.users.updateOne({ email: "dev@uni.edu" }, { $set: { role: "developer" } })
 
 ---
 
-## 🔌 API Endpoints Summary
+##  API Endpoints Summary
 
 | Method | Route | Description |
 |---|---|---|
@@ -227,7 +227,7 @@ db.users.updateOne({ email: "dev@uni.edu" }, { $set: { role: "developer" } })
 
 ---
 
-## 🔗 Integration Notes for Group Members
+##  Integration Notes for Group Members
 
 This module handles:
 - Authentication (JWT tokens stored in localStorage as `KNOWva_token`)
