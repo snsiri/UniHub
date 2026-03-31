@@ -67,8 +67,8 @@ const Sidebar = () => {
         </div>
         <div>
           <div className="sidebar-logo-text">
-            <span style={{ color: 'var(--text)' }}>KNOW</span>
-            <span style={{ color: 'var(--primary)', fontStyle: 'italic' }}>va</span>
+            <span style={{ color: 'var(--text)' }}>Uni</span>
+            <span style={{ color: 'var(--primary)', fontStyle: 'italic' }}>Hub</span>
           </div>
           <div className="sidebar-logo-sub">University Portal</div>
         </div>

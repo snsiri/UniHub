@@ -5,10 +5,10 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user,    setUser]    = useState(() => {
-    const stored = localStorage.getItem('KNOWva_user');
+    const stored = localStorage.getItem('UniHub_user');
     return stored ? JSON.parse(stored) : null;
   });
-  const [token,   setToken]   = useState(() => localStorage.getItem('KNOWva_token') || null);
+  const [token,   setToken]   = useState(() => localStorage.getItem('UniHub_token') || null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
         try {
           const { data } = await authAPI.getMe();
           setUser(data);
-          localStorage.setItem('KNOWva_user', JSON.stringify(data));
+          localStorage.setItem('UniHub_user', JSON.stringify(data));
         } catch {
           logout();
         }
@@ -30,20 +30,20 @@ export const AuthProvider = ({ children }) => {
   const login = (userData, userToken) => {
     setUser(userData);
     setToken(userToken);
-    localStorage.setItem('KNOWva_user',  JSON.stringify(userData));
-    localStorage.setItem('KNOWva_token', userToken);
+    localStorage.setItem('UniHub_user',  JSON.stringify(userData));
+    localStorage.setItem('UniHub_token', userToken);
   };
 
   const logout = () => {
     setUser(null);
     setToken(null);
-    localStorage.removeItem('KNOWva_user');
-    localStorage.removeItem('KNOWva_token');
+    localStorage.removeItem('UniHub_user');
+    localStorage.removeItem('UniHub_token');
   };
 
   const updateUser = (updatedUser) => {
     setUser(updatedUser);
-    localStorage.setItem('KNOWva_user', JSON.stringify(updatedUser));
+    localStorage.setItem('UniHub_user', JSON.stringify(updatedUser));
   };
 
   return (

@@ -22,7 +22,7 @@ exports.updateProfile = async (req, res) => {
     const { name, bio, semester, year, department } = req.body;
     const updates = { name, bio, semester, year, department };
 
-    if (req.file) { const { uploadToCloudinary } = require("../config/cloudinary"); const result = await uploadToCloudinary(req.file.buffer, { folder: "knowva/avatars", resource_type: "image" }); updates.avatar = result.secure_url; }
+    if (req.file) { const { uploadToCloudinary } = require("../config/cloudinary"); const result = await uploadToCloudinary(req.file.buffer, { folder: "unihub/avatars", resource_type: "image" }); updates.avatar = result.secure_url; }
 
     const user = await User.findByIdAndUpdate(req.user._id, updates, { new: true });
     res.json(user);
@@ -138,7 +138,7 @@ exports.updateAvatar = async (req, res) => {
     if (!req.file) return res.status(400).json({ message: 'No image provided' });
     const { uploadToCloudinary } = require('../config/cloudinary');
     const result = await uploadToCloudinary(req.file.buffer, {
-      folder: 'knowva/avatars', resource_type: 'image',
+      folder: 'unihub/avatars', resource_type: 'image',
       transformation: [{ width: 400, height: 400, crop: 'fill', gravity: 'face' }]
     });
     const user = await User.findByIdAndUpdate(req.user._id, { avatar: result.secure_url }, { new: true });
@@ -152,7 +152,7 @@ exports.updateCover = async (req, res) => {
     if (!req.file) return res.status(400).json({ message: 'No image provided' });
     const { uploadToCloudinary } = require('../config/cloudinary');
     const result = await uploadToCloudinary(req.file.buffer, {
-      folder: 'knowva/covers', resource_type: 'image',
+      folder: 'unihub/covers', resource_type: 'image',
       transformation: [{ width: 1200, height: 400, crop: 'fill' }]
     });
     const user = await User.findByIdAndUpdate(req.user._id, { coverPhoto: result.secure_url }, { new: true });

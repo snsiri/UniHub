@@ -236,10 +236,10 @@ const PostCard = ({ post: init, onDelete }) => {
 
   const handleShareExternal = (platform, e) => {
     e.stopPropagation();
-    const text = `Check out this post on KNOWva: ${postUrl}`;
+    const text = `Check out this post on UniHub: ${postUrl}`;
     const urls = {
       whatsapp: `https://wa.me/?text=${encodeURIComponent(text)}`,
-      gmail:    `mailto:?subject=KNOWva Post&body=${encodeURIComponent(text)}`,
+      gmail:    `mailto:?subject=UniHub Post&body=${encodeURIComponent(text)}`,
       twitter:  `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`,
     };
     window.open(urls[platform], '_blank');

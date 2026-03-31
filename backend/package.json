@@ -1,7 +1,7 @@
 {
-  "name": "knowva-backend",
+  "name": "unihub-backend",
   "version": "1.0.0",
-  "description": "KNOWva Backend API",
+  "description": "UniHub Backend API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

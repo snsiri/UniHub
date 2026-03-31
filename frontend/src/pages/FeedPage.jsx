@@ -171,7 +171,7 @@ const FeedPage = () => {
       <div className="feed-page">
         <div className="page-header">
           <h1><FiGlobe size={20}/> Feed</h1>
-          <p>All public posts from the KNOWva community</p>
+          <p>All public posts from the UniHub community</p>
         </div>
 
         <div className="filter-bar">

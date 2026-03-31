@@ -33,7 +33,7 @@ exports.sendMessage = async (req, res) => {
       const mime         = req.file.mimetype;
       const resourceType = getResourceType(mime);
       const result = await uploadToCloudinary(req.file.buffer, {
-        folder:          'knowva/chat',
+        folder:          'unihub/chat',
         resource_type:   resourceType,
         use_filename:    true,
         unique_filename: true,

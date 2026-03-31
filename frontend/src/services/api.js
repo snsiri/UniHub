@@ -3,7 +3,7 @@ import axios from 'axios';
 const api = axios.create({ baseURL: '/api' });
 
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('KNOWva_token');
+  const token = localStorage.getItem('UniHub_token');
   if (token) config.headers.Authorization = `Bearer ${token}`;
   return config;
 });
@@ -12,8 +12,8 @@ api.interceptors.response.use(
   (res) => res,
   (err) => {
     if (err.response?.status === 401) {
-      localStorage.removeItem('KNOWva_token');
-      localStorage.removeItem('KNOWva_user');
+      localStorage.removeItem('UniHub_token');
+      localStorage.removeItem('UniHub_user');
       window.location.href = '/login';
     }
     return Promise.reject(err);

@@ -28,7 +28,7 @@ const LoginPage = () => {
     <div className="auth-page">
       <div className="auth-card">
         <div className="auth-brand">
-          <div className="auth-brand-logo">KNOW<span>va</span></div>
+          <div className="auth-brand-logo">Uni<span>Hub</span></div>
           <div className="auth-brand-tagline">Your university knowledge network</div>
         </div>
         <h2 className="auth-title">Welcome back</h2>

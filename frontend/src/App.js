@@ -18,12 +18,12 @@ import DeveloperPage      from './pages/DeveloperPage';
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useAuth();
-  if (loading) return <div className="full-page-loader">Loading KNOWva...</div>;
+  if (loading) return <div className="full-page-loader">Loading UniHub...</div>;
   return user ? children : <Navigate to="/login" replace />;
 };
 const PublicRoute = ({ children }) => {
   const { user, loading } = useAuth();
-  if (loading) return <div className="full-page-loader">Loading KNOWva...</div>;
+  if (loading) return <div className="full-page-loader">Loading UniHub...</div>;
   return !user ? children : <Navigate to="/feed" replace />;
 };
 

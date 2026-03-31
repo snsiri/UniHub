@@ -19,14 +19,14 @@ const getResourceType = (mime) => {
 };
 
 const getFolder = (mime) => {
-  if (mime.startsWith('image/'))   return 'knowva/images';
-  if (mime.startsWith('video/'))   return 'knowva/videos';
-  if (mime.startsWith('audio/'))   return 'knowva/audio';
-  if (mime === 'application/pdf')  return 'knowva/pdfs';
-  if (mime.includes('word') || mime.includes('document')) return 'knowva/docs';
-  if (mime.includes('sheet') || mime.includes('excel'))   return 'knowva/sheets';
-  if (mime.includes('presentation') || mime.includes('powerpoint')) return 'knowva/ppts';
-  return 'knowva/misc';
+  if (mime.startsWith('image/'))   return 'unihub/images';
+  if (mime.startsWith('video/'))   return 'unihub/videos';
+  if (mime.startsWith('audio/'))   return 'unihub/audio';
+  if (mime === 'application/pdf')  return 'unihub/pdfs';
+  if (mime.includes('word') || mime.includes('document')) return 'unihub/docs';
+  if (mime.includes('sheet') || mime.includes('excel'))   return 'unihub/sheets';
+  if (mime.includes('presentation') || mime.includes('powerpoint')) return 'unihub/ppts';
+  return 'unihub/misc';
 };
 
 // @desc  Create post

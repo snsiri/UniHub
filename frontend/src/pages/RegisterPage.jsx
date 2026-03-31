@@ -16,7 +16,7 @@ const RegisterPage = () => {
     try {
       const { data } = await authAPI.register(form);
       login(data.user, data.token);
-      toast.success('Account created! Welcome to KNOWva 🎓');
+      toast.success('Account created! Welcome to UniHub 🎓');
       navigate('/feed');
     } catch (err) {
       toast.error(err.response?.data?.message || 'Registration failed');
@@ -30,7 +30,7 @@ const RegisterPage = () => {
     <div className="auth-page">
       <div className="auth-card wide">
         <div className="auth-brand">
-          <div className="auth-brand-logo">KNOW<span>va</span></div>
+          <div className="auth-brand-logo">Uni<span>Hub</span></div>
           <div className="auth-brand-tagline">Your university knowledge network</div>
         </div>
         <h2 className="auth-title">Create your account</h2>

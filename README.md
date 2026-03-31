@@ -1,4 +1,4 @@
-# 🎓 KNOWva — Student Social & Study Platform
+# 🎓 UniHub — Student Social & Study Platform
 
 A full-stack MERN application for university students to share posts, study materials, chat, and collaborate — with an AI auto-classification system.
 
@@ -7,7 +7,7 @@ A full-stack MERN application for university students to share posts, study mate
 ## 📁 Project Structure
 
 ```
-knowva/
+unihub/
 ├── backend/                    # Express + MongoDB API
 │   ├── server.js               # Entry point, Socket.io setup
 │   ├── .env.example            # Environment variable template
@@ -96,7 +96,7 @@ knowva/
 ### 2. Backend Setup
 
 ```bash
-cd knowva/backend
+cd unihub/backend
 npm install
 cp .env.example .env
 # Edit .env with your credentials
@@ -115,7 +115,7 @@ npm run dev
 ### 3. Frontend Setup
 
 ```bash
-cd knowva/frontend
+cd unihub/frontend
 npm install
 npm start
 # App runs on http://localhost:3000
@@ -230,7 +230,7 @@ db.users.updateOne({ email: "dev@uni.edu" }, { $set: { role: "developer" } })
 ## 🔗 Integration Notes for Group Members
 
 This module handles:
-- Authentication (JWT tokens stored in localStorage as `KNOWva_token`)
+- Authentication (JWT tokens stored in localStorage as `UniHub_token`)
 - All post/feed/study material logic
 - Real-time chat (Socket.io on port 5000)
 - AI classification system
